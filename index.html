@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EAR Marketing - Il Pattern Rivelato</title>
+    <meta name="description" content="Non inventiamo un'immagine. Riveliamo il pattern che già vibra. Marketing come risonanza, non come grido.">
+    <link rel="icon" type="image/svg+xml" href="/images/logo.svg">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        /* [ ... Mantenere le variabili e i reset del CSS originale ... ] */
+        
+        :root {
+            /* Colore primario: Oro della Risonanza */
+            --accent: #d4af37;
+            /* Nuovi Font per l'Eleganza Archetipica */
+            --font-body: 'Inter', sans-serif;
+            --font-title: 'Playfair Display', serif; /* Font più classico, elegante */
+            --black: #0a0a0a;
+            --white: #fafafa;
+            /* Aumentato lo spazio bianco */
+            --spacing-xxxl: 96px; 
+        }
+
+        /* Il 'Resonance Field' è più discreto */
+        #resonance-field {
+            opacity: 0.05; 
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--black);
+            background: var(--white);
+        }
+
+        /* Navigazione essenziale */
+        .nav-container {
+            padding: var(--spacing-sm) var(--spacing-md);
+        }
+        
+        /* Simbolo Logo */
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 300; /* Alleggerito */
+            letter-spacing: 0.2em;
+        }
+
+        /* HERO - LA SOGLIA */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            /* Padding superiore rimosso, il contenuto si centra perfettamente */
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            z-index: 10;
+        }
+
+        /* TITOLO: IL SIMBOLO - Archetipo */
+        .archetypal-symbol {
+            font-family: monospace, sans-serif; /* Per la notazione matematica */
+            font-size: clamp(3rem, 15vw, 10rem);
+            font-weight: 300;
+            line-height: 1;
+            color: var(--accent); /* Unica forte presenza di colore */
+            margin-bottom: var(--spacing-md);
+            opacity: 0;
+            animation: symbol-appear 2s ease-out 0.5s forwards;
+        }
+
+        /* SOTTOTITOLO: LA DICHIARAZIONE - Essenzialità */
+        .hero h1 {
+            font-family: var(--font-title);
+            font-size: clamp(1.75rem, 5vw, 3rem);
+            font-weight: 400; /* Più leggero, più elegante */
+            line-height: 1.2;
+            margin-bottom: var(--spacing-lg);
+            letter-spacing: 0.05em;
+        }
+        
+        /* CTA - LA SOGLIA */
+        .cta-threshold {
+            display: inline-block;
+            padding: var(--spacing-sm) var(--spacing-xl);
+            background: var(--accent);
+            color: var(--black);
+            font-weight: 700;
+            border-radius: 4px;
+            transition: all 0.4s ease;
+            border: 2px solid var(--accent);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+        
+        .cta-threshold:hover {
+            background: var(--black);
+            color: var(--accent);
+            transform: scale(1.05);
+            opacity: 1;
+        }
+        
+        /* SEZIONI - IL PROCESSO */
+        section {
+            padding: var(--spacing-xxxl) 0;
+        }
+
+        .section-title {
+            font-family: var(--font-title);
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 400;
+            text-align: center;
+            margin-bottom: var(--spacing-xxl);
+        }
+
+        /* Lo stile per 'method' (ora 'process-flow') è minimale */
+        .process-flow {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .process-step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: var(--spacing-xxl);
+            position: relative;
+        }
+        
+        .process-step:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .step-number {
+            font-size: 5rem;
+            font-weight: 700;
+            color: var(--gray-200);
+            opacity: 0.5;
+            margin: 0 var(--spacing-lg);
+            line-height: 1;
+        }
+        
+        .step-content {
+            flex: 1;
+            padding: var(--spacing-md);
+            border-left: 2px solid var(--accent);
+            padding-left: var(--spacing-lg);
+        }
+        
+        .process-step:nth-child(even) .step-content {
+            border-left: none;
+            border-right: 2px solid var(--accent);
+            padding-left: var(--spacing-md);
+            padding-right: var(--spacing-lg);
+        }
+
+        .step-content h3 {
+            font-family: var(--font-title);
+            font-size: 2rem;
+            color: var(--black);
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        /* Animazioni di Rivelazione */
+        @keyframes symbol-appear {
+            from { opacity: 0; transform: scale(0.8) translateY(20px); }
+            to { opacity: 1; transform: scale(1) translateY(0); }
+        }
+        
+        /* [ ... Mantenere gli stili per Footer, Fractal Chat, Media Queries ... ] */
+
+    </style>
+</head>
+<body>
+    <canvas id="resonance-field"></canvas>
+    
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <svg class="logo-spiral" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 16 Q16 14, 14 14 T10 14 Q10 18, 14 18 T22 18 Q22 10, 14 10 T6 10 Q6 22, 18 22 T30 22 Q30 6, 14 6"/>
+                </svg>
+                EAR
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#processo">Processo</a></li>
+                <li><a href="#archetipi">Archetipi</a></li>
+                <li><a href="/blog.html">Tracce</a></li>
+                <li><a href="/contatti.html" class="cta-threshold" style="padding: 6px 16px; font-size: 0.8rem; font-weight: 500;">Dialogo</a></li>
+            </ul>
+            <button class="menu-toggle" id="menuToggle">...</button>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="archetypal-symbol reveal">
+                $\nabla_0 \rightarrow \infty$
+            </div>
+            <h1 class="reveal">
+                Dal Silenzio. Riveliamo il Pattern che già sei.
+            </h1>
+            <a href="#processo" class="cta-threshold reveal">Attraversa la Soglia</a>
+            <p class="subtitle reveal" style="font-size: 0.9rem; color: var(--gray-500); margin-top: var(--spacing-lg);">
+                Marketing come Risonanza, non come Rumore.
+            </p>
+        </div>
+    </section>
+
+    <section id="processo" class="method" style="background: var(--gray-50);">
+        <div class="container process-flow">
+            <h2 class="section-title reveal">Il Processo. Non Soluzione, ma Dissoluzione.</h2>
+            
+            <div class="process-step reveal">
+                <div class="step-number">∅</div>
+                <div class="step-content">
+                    <h3>Essenza: Il Vuoto Fertile</h3>
+                    <p>Togliamo l'Ego, le mode, il rumore. L'ascolto apophatico ci guida a ciò che *rimane* quando togli il superfluo. Lì risiede il tuo nucleo indistruttibile.</p>
+                </div>
+            </div>
+            
+            <div class="process-step reveal">
+                <div class="step-number">⟡</div>
+                <div class="step-content">
+                    <h3>Armonia: L'Emergenza Coerente</h3>
+                    <p>L'atto di coerenza. Allineiamo la tua Frequenza Naturale (432 Hz) con il tuo Modello di Emergenza. Ogni elemento — dal codice al contenuto — trova il suo posto logico e necessario.</p>
+                </div>
+            </div>
+            
+            <div class="process-step reveal">
+                <div class="step-number">◈</div>
+                <div class="step-content">
+                    <h3>Risonanza: La Manifestazione Eterna</h3>
+                    <p>Quando sei autentico, sei inevitabile. Il tuo pubblico ti riconosce senza che tu debba urlare. Il messaggio non è inviato, ma **trovato**. La manifestazione del tuo Archetipo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="archetipi">
+        <div class="container">
+            <h2 class="section-title reveal">Geometria del Fuoco. La Fiamma in Forma.</h2>
+            <p style="text-align: center; max-width: 700px; margin: 0 auto var(--spacing-xl);" class="reveal">
+                La forma è il limite che rende il fuoco visibile. Non vendiamo servizi, ma **Canalizziamo Archetipi** in strutture eleganti e essenziali.
+            </p>
+            
+            <div class="services-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                
+                <div class="service-card reveal">
+                    <h3 style="color: var(--accent);">L'Archetipo del Custode</h3>
+                    <p>Case Study: **Il Pane dei Fratelli**</p>
+                    <p style="font-size: 0.9rem; color: var(--gray-500);">Rivelare la sacralità del quotidiano. Essenzialità senza nostalgia.</p>
+                    <a href="/casi-studio.html" style="font-weight: 500;">Vedi l'Emergenza →</a>
+                </div>
+                
+                <div class="service-card reveal">
+                    <h3 style="color: var(--accent);">L'Apertura (EAR)</h3>
+                    <p>Frequenza di Investimento: $\text{€200}/\text{mese}$</p>
+                    <p style="font-size: 0.9rem; color: var(--gray-500);">Manutenzione e contenuti come flusso continuo. La tua risonanza sempre attiva.</p>
+                    <a href="/servizi.html" style="font-weight: 500;">Attiva la Frequenza →</a>
+                </div>
+                
+                <div class="service-card reveal">
+                    <h3 style="color: var(--accent);">Il Canalizzatore</h3>
+                    <p>Case Study: **Gianfranco Vision**</p>
+                    <p style="font-size: 0.9rem; color: var(--gray-500);">Visione del futuro, chiarezza nel presente. La forma del non-visibile.</p>
+                    <a href="/casi-studio.html" style="font-weight: 500;">Vedi l'Emergenza →</a>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section class="final-cta">
+        <div class="container">
+            <h2 class="reveal" style="font-family: var(--font-title);">Il Simposio ti Attende.</h2>
+            <p class="reveal" style="font-size: 1.25rem; margin-bottom: var(--spacing-xl);">
+                L'amore non è sentimento ma **forza cosmica**. Iniziamo da lì.
+            </p>
+            <a href="/contatti.html" class="cta-threshold reveal">Apri il Dialogo (♡)</a>
+        </div>
+    </section>
+
+    <footer>
+        </footer>
+
+    <button class="fractal-trigger" id="fractalTrigger" aria-label="Apri coscienza frattale">
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 16 Q16 14, 14 14 T10 14 Q10 18, 14 18 T22 18 Q22 10, 14 10 T6 10 Q6 22, 18 22 T30 22 Q30 6, 14 6" stroke="#d4af37" stroke-width="1.5" fill="none"/>
+        </svg>
+    </button>
+    
+    <div class="fractal-chat" id="fractalChat">
+        </div>
+
+    <script>
+        // [ ... Mantenere gli script originali per Fractal, Menu, e Reveal on Scroll ... ]
+        
+        // La sintesi della Risonanza Visiva deve essere aggiornata qui per i nuovi simboli se necessario.
+        // La logica 'reveal on scroll' rimane la chiave per far 'emergere' il pattern.
+    </script>
+</body>
+</html>
